@@ -5094,7 +5094,7 @@
     "RepositoryKeys": {
       "Ubuntu1604": {
         "evernym": "BD33704C",
-        "indy": "CE7709D068DB5E88"
+        "indy": "9692C00E657DDE61"
       }
     },
     "RepositoryEvernym": {
@@ -5105,8 +5105,8 @@
     },
     "RepositoryIndy": {
       "Ubuntu1604": {
-        "stable": "deb https://repo.sovrin.org/deb xenial stable",
-        "master": "deb https://repo.sovrin.org/deb xenial master"
+        "stable": "deb https://hyperledger.jfrog.io/artifactory/indy bionic stable",
+        "master": "deb https://hyperledger.jfrog.io/artifactory/indy bionic master"
       }
     },
     "ValidatorData": {

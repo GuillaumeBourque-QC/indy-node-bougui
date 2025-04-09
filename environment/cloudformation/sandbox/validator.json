@@ -997,8 +997,8 @@
                 "repo": "deb https://repo.evernym.com/deb xenial stable"
             },
             "indy": {
-                "key": "CE7709D068DB5E88",
-                "repo": "deb https://repo.sovrin.org/deb xenial stable"
+                "key": "9692C00E657DDE61",
+                "repo": "deb https://hyperledger.jfrog.io/artifactory/indy bionic stable"
             }
         }
     }

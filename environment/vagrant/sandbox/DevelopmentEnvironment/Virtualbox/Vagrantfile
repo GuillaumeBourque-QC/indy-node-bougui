@@ -300,8 +300,8 @@ echo "Installing Required Packages"
 apt-get update
 apt-get install -y software-properties-common python-software-properties
 # The following two lines are required to install a indy cli
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
-add-apt-repository "deb https://repo.sovrin.org/deb xenial stable"
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
+add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/indy bionic stable"
 # Download the package lists from added repos
 apt-get update
 

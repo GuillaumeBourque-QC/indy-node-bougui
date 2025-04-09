@@ -29,9 +29,8 @@ cp $TIMEZONE /etc/localtime
 echo "Installing Required Packages"
 apt-get update
 apt-get install -y software-properties-common python-software-properties libsodium18
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
-add-apt-repository "deb https://repo.sovrin.org/deb xenial stable"
-add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial stable"
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
+add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/indy bionic stable"
 add-apt-repository ppa:jonathonf/python-3.6
 apt-get update
 apt-get install python3.6 -y

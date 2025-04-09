@@ -135,8 +135,8 @@ can be used on Ubuntu 16.04:
 # Start of repository configuration steps
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
-sudo add-apt-repository "deb https://repo.sovrin.org/deb xenial master"
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
+sudo add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/indy bionic master"
 # End of repository configuration steps
 sudo apt-get update
 sudo apt-get install libbz2-dev \
@@ -156,7 +156,7 @@ It also relies on [ursa](https://github.com/hyperledger/ursa), a library that su
 
 There are deb packages of libindy and ursa that can be used on Ubuntu:
 ```
-sudo add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial stable"
+sudo add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/indy bionic master"
 sudo apt-get update
 sudo apt-get install -y libindy ursa
 ```

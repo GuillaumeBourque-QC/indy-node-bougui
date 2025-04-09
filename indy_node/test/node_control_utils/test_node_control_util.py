@@ -195,7 +195,7 @@ def test_generated_cmd_update_package_cache_2(monkeypatch):
     NodeControlUtil.update_package_cache()
     assert len(commands) == 4
     assert commands[0] == "apt update"
-    assert commands[1] == "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88"
+    assert commands[1] == "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61"
     assert commands[2] == "apt list --upgradable"
     assert commands[3] == "apt update"
 
@@ -233,7 +233,7 @@ liblxc1/xenial-updates 2.0.11-0ubuntu1~16.04.3 amd64 [upgradable from: 2.0.8-0ub
     NodeControlUtil.update_package_cache()
     assert len(commands) == 5
     assert commands[0] == "apt update"
-    assert commands[1] == "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88"
+    assert commands[1] == "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61"
     assert commands[2] == "apt list --upgradable"
     assert commands[3] == "apt --only-upgrade install -y libgnutls30"
     assert commands[4] == "apt update"
@@ -242,7 +242,7 @@ liblxc1/xenial-updates 2.0.11-0ubuntu1~16.04.3 amd64 [upgradable from: 2.0.8-0ub
 def test_generated_cmd_update_repo_keys(catch_generated_commands):
     NodeControlUtil.update_repo_keys()
     assert len(generated_commands) == 1
-    assert generated_commands[0] == "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88"
+    assert generated_commands[0] == "apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61"
 
 
 # apt update dependencies don't need to be upgraded

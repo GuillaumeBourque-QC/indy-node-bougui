@@ -5,7 +5,7 @@ ARG uid=1000
 ARG gid=0
 
 # Install environment
-RUN apt-get update -y && apt-get install -y \ 
+RUN apt-get update -y && apt-get install -y \
 	git \
 	wget \
 	python3.5 \
@@ -15,15 +15,15 @@ RUN apt-get update -y && apt-get install -y \
 	apt-transport-https \
 	ca-certificates
 
-RUN pip3 install -U \ 
+RUN pip3 install -U \
 	'pip<10.0.0' \
 	setuptools
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BD33704C
 
 RUN echo "deb https://repo.evernym.com/deb xenial stable" >> /etc/apt/sources.list
-RUN echo "deb https://repo.sovrin.org/deb xenial stable" >> /etc/apt/sources.list
+RUN echo "deb https://hyperledger.jfrog.io/artifactory/indy bionic stable" >> /etc/apt/sources.list
 
 RUN useradd -ms /bin/bash -l -u $uid -G $gid indy
 RUN apt-get update -y && apt-get install -y indy-node

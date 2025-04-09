@@ -289,12 +289,11 @@ NOTE: On Ubuntu 20.04, some of the above "tests" can fail when the networking is
 
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3BC8C2DD662F1C45
 sudo add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/indy focal stable"
 sudo printf '%s\n%s\n%s\n' 'Package: *' 'Pin: origin hyperledger.jfrog.io' 'Pin-Priority: 1001' >> /etc/apt/preferences
 sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu bionic-security main"
-sudo add-apt-repository "deb https://repo.sovrin.org/deb bionic master"
+sudo add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/deb bionic master"
 sudo add-apt-repository "deb https://sovrin.jfrog.io/artifactory/deb focal stable"
 sudo apt-get update -y
 sudo apt-get upgrade -y

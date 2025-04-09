@@ -13,9 +13,9 @@ echo "Installing Required Packages"
 apt-get update
 apt-get install -y software-properties-common python-software-properties
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BD33704C
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
 add-apt-repository "deb https://repo.evernym.com/deb xenial $BRANCH"
-add-apt-repository "deb https://repo.sovrin.org/deb xenial $BRANCH"
+add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/indy bionic $BRANCH"
 apt-get update
 #DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 DEBIAN_FRONTEND=noninteractive apt-get install -y dialog figlet python-pip python3-pip python3.5-dev unzip make screen indy-node tmux vim wget

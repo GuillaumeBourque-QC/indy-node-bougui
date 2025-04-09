@@ -34,8 +34,8 @@ cp $TIMEZONE /etc/localtime
 echo "Installing Required Packages"
 apt-get update
 apt-get install -y software-properties-common python-software-properties
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
-add-apt-repository "deb https://repo.sovrin.org/deb xenial master"
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
+add-apt-repository "deb https://hyperledger.jfrog.io/artifactory/indy bionic master"
 apt-get update
 #DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 DEBIAN_FRONTEND=noninteractive apt-get install -y unzip make screen indy-node tmux vim wget

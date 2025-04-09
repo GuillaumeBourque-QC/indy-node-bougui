@@ -363,13 +363,13 @@ class NodeControlUtil:
             cls.run_shell_script(cmd)
         except Exception as e:
             # Currently two issues can stop this from working.
-            # 1) The Sovrin Repo key needs to be updated
-            #    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
+            # 1) The Indy Repo key needs to be updated
+            #    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9692C00E657DDE61
             # 2) The following certificate validation error occurs:
-            #       Err:6 https://repo.sovrin.org/deb xenial Release
+            #       Err:6 https://hyperledger.jfrog.io/artifactory/indy bionic Release
             #         server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
             #       Reading package lists... Done
-            #       E: The repository 'https://repo.sovrin.org/deb xenial Release' does not have a Release file.
+            #       E: The repository 'https://hyperledger.jfrog.io/artifactory/indy bionic Release' does not have a Release file.
             #       N: Updating from such a repository can't be done securely, and is therefore disabled by default.
             #       N: See apt-secure(8) manpage for repository creation and user configuration details.
             #    This can be fixed by updating libgnutls30:
@@ -385,7 +385,7 @@ class NodeControlUtil:
     @classmethod
     def update_repo_keys(cls):
         logger.info("Updating signing keys for the artifact repository ...")
-        cmd = compose_cmd(['apt-key', 'adv', '--keyserver', 'keyserver.ubuntu.com', '--recv-keys', 'CE7709D068DB5E88'])
+        cmd = compose_cmd(['apt-key', 'adv', '--keyserver', 'keyserver.ubuntu.com', '--recv-keys', '9692C00E657DDE61'])
         cls.run_shell_script(cmd)
 
     @classmethod

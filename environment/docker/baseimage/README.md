@@ -21,9 +21,9 @@ Based on **ubuntu:16.04**.
 Configures apt for https and installs some common tools (git, wget, vim) and python3.5 with pip, setuptools and virtualenv.
 
 ### indy-baseci
-Base image for any kind of CI testing images that need [Indy Core apt repository](https://repo.sovrin.org/deb).
+Base image for any kind of CI testing images that need [Indy Core apt repository](https://hyperledger.jfrog.io/artifactory/indy).
 Based on [indy-baseimage](#indy-baseimage).
-Adds [Indy Core apt repository](https://repo.sovrin.org/deb) to apt sources.list. Also it adds two scripts into system $PATH available directory that could be run by child images to perform common setup routine:
+Adds [Indy Core apt repository](https://hyperledger.jfrog.io/artifactory/indy) to apt sources.list. Also it adds two scripts into system $PATH available directory that could be run by child images to perform common setup routine:
 
  - `indy_ci_add_user` creates user with python virtualenv configured
 
@@ -32,7 +32,7 @@ Base image for images that provide CI testing environment for Indy core projects
 [indy-plenum](https://github.com/hyperledger/indy-plenum),
 [indy-node](https://github.com/hyperledger/indy-node)).
 Based on  [indy-baseci](#indy-baseci).
-Adds [Indy SDK apt repository](https://repo.sovrin.org/sdk/deb) to apt sources.list and configures apt preferences to make indy sdk packages from Indy Core apt repo more prioritized than from Indy SDK repo.
+Adds [Indy SDK apt repository](https://hyperledger.jfrog.io/artifactory/indy) to apt sources.list and configures apt preferences to make indy sdk packages from Indy Core apt repo more prioritized than from Indy SDK repo.
 
 ## Usage
 
